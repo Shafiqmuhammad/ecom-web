@@ -2,10 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 import { LuShoppingCart } from "react-icons/lu";
 import imgHero from "/public/header.webp"
-import featured1 from "public/assets/featured1.png"
-import featured2 from "public/assets/featured2.png"
-import featured3 from "public/assets/featured3.png"
-import featured4 from "public/assets/featured4.png"
+import featured1 from "/public/assets/featured1.png"
+import featured2 from "/public/assets/featured2.png"
+import featured3 from "/public/assets/featured3.png"
+import featured4 from "/public/assets/featured4.png"
 import StartShopping from '../app/StartShopping/page';
 import Link from 'next/link';
 const Hero = () =>{
