@@ -4,7 +4,7 @@ import { client } from '@/app/lib/sanityClient'
 import { Image as IImage } from 'sanity'
 
 
-export const getProductData = async (category:any=undefined) => {
+const getProductData = async (category:any=undefined) => {
     if(category){
       const res = await client.fetch(`*[_type=='product' && category->category == "${category}"] { price,_id,title,image, category->{category} }`)
       return res
@@ -26,7 +26,7 @@ export const getProductData = async (category:any=undefined) => {
     }
   }
   
-  export default async function StartShopping({searchParams}:any) {
+export default async function StartShopping({searchParams}:any) {
     const {category}=searchParams;
     const data: IProduct[] = await getProductData(category)
     return (
