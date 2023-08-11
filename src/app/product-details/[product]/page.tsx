@@ -4,7 +4,7 @@ import { client } from '@/app/lib/sanityClient'
 // import { Image as IImage } from 'sanity'
 import Details from './details'
 
-export const getProduct = async (product:string) => {
+ const getProduct = async (product:string) => {
     const res = await client.fetch(`*[_type=='product' && _id=='${product}'] {price,_id,title,image,category -> {name}}`)
     return res
   }
