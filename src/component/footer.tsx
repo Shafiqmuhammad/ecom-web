@@ -2,6 +2,7 @@ import Image from "next/image";
 import Wrapper from "@/wrapper";
 import { FaFacebook, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
+import logo from "public/assets/Logo.png";
 
 const Footer = () => {
   const date = new Date();
@@ -13,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col w-full lg:flex-row justify-between lg:items-start mb-10 text-green-900 font-bold">
           {/* image and its content */}
           <div className="w-2/6 flex flex-col gap-12 lg:mt-6 ">
-            <Image src="/Logo.webp" alt="logo" width={100} height={100} />
+          <Image src={logo} alt={"logo"} />
             <p>
               Small, artisan label that offers a thoughtfully curated collection
               of high quality everyday essentials made.

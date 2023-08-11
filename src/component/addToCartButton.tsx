@@ -3,7 +3,7 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch} from "react-redux"
-import { cartActions } from '@/slice/cartSlice';
+// import { cartActions } from '@/slice/cartSlice';
 
 import React, {useEffect, useState} from 'react'
 const toast_config:any =  {
@@ -19,7 +19,7 @@ const toast_config:any =  {
 
 const notify = (text:any) => toast(text + " added Successfuly!", toast_config);
 
-export default function AddToCartButton({item}:any) {
+export default function AddToCartButton({item,setItem}:any) {
 
     const storeCart = (item:any) => {
         let data = JSON.parse(window.localStorage.getItem('cart') || '{}');
@@ -32,7 +32,9 @@ export default function AddToCartButton({item}:any) {
         }
     
         window.localStorage.setItem('cart', JSON.stringify(data));
-
+        if(setItem)
+          setItem(data[id]);
+        
         notify(item.title)
       };
        

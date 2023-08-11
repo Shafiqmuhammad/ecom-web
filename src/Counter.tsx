@@ -7,7 +7,7 @@ const CounterView=()=>{
   const dispatch = useDispatch();
 
     const counterValue = useSelector(
-      (state:RootState)=>state.CounterSlice.value);
+      (state:RootState)=>state.Cart.value);
 
     const increment = () => {
       dispatch(CounterActions.increment());

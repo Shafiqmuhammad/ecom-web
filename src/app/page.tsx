@@ -7,19 +7,10 @@ import Hero from '../component/herosection'
 import Promotions from '../component/promotions'
 import ProductList from './views/ProductList'
 import SuccessPage from './success/page'
+import Unique from '@/component/Unique'
+import CounterView from '@/Counter'
+import Newsletter from '@/component/Newsletter'
 
-export const getProductData = async () => {
-  const res = await client.fetch(`*[_type=='product'] {
-    price,
-      _id,
-      title,
-      image,
-      category -> {
-        name
-      }
-  }`)
-  return res
-}
 
 interface IProduct {
   title: string,
@@ -34,7 +25,6 @@ interface IProduct {
 
 export default async function Home() {
 
-  const data: IProduct[] = await getProductData()
 
   return (
     <div>
@@ -42,21 +32,11 @@ export default async function Home() {
       <Hero />
       <Promotions />
 
-      <div id="shopnow" className='flex justify-evenly  gap-x-12 text-center'>
-
-        {data.map((item, index) => (
-          <div key={index}>
-            <ProductCard item={item} />
-          </div>
-
-
-        ))}
-        
-
-      </div>
+      
       <div>
         <ProductList />
-        <SuccessPage />
+        <Unique />
+        <Newsletter />
         </div>
     </div>
   )

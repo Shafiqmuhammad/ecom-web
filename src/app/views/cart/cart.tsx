@@ -18,7 +18,7 @@ export default function CartComponent() {
 
         for (let itemId in data) {
             totalQuantity += data[itemId].quantity;
-            totalPrice += parseFloat(data[itemId].total_price.replace(/\$/g, ""));
+            totalPrice += parseFloat(data[itemId].total_price?.replace(/\$/g, ""));
         }
 
         // now set values in state

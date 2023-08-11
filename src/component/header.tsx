@@ -15,19 +15,19 @@ const Header = () => {
 
             <ul className="flex gap-x-20">
                 <li className="text-lg">
-                    <Link href={"/category/female"}>Female </Link>
+                    <Link href={"/StartShopping?category=Female"}>Female </Link>
                 </li>
 
                 <li className="text-lg">
-                    <Link href={"/category/male"}>Male </Link>
+                    <Link href={"/StartShopping?category=Male"}>Male </Link>
                 </li>
 
                 <li className="text-lg">
-                    <Link href={"/category/kids"}>Kids </Link>
+                    <Link href={"/StartShopping?category=Kids"}>Kids </Link>
                 </li>
 
                 <li className="text-lg">
-                    <Link href={"/category/products"}>All Products </Link>
+                    <Link href={"/StartShopping"}>All Products </Link>
                 </li>
             </ul>
 

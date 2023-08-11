@@ -6,7 +6,7 @@ import featured1 from "public/assets/featured1.png"
 import featured2 from "public/assets/featured2.png"
 import featured3 from "public/assets/featured3.png"
 import featured4 from "public/assets/featured4.png"
-import StartShopping from './StartShopping';
+import StartShopping from '../app/StartShopping/page';
 import Link from 'next/link';
 const Hero = () =>{
     return (
@@ -24,7 +24,7 @@ const Hero = () =>{
             </p>
             {/* <StartShopping /> */}
 
-            <Link href={"/?#shopnow"} >
+            <Link href={"/StartShopping"} >
 
             <button className='flex items-center justify-center rounded-2xl text-white bg-green-700 py-3 px-4 mt-4 shadow '
             
