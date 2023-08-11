@@ -27,7 +27,8 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
             apiVersion: '2022-11-15',
             
         });
-        const YOUR_DOMAIN = 'http://localhost:3000';
+        const {origin} = req.nextUrl;
+        const YOUR_DOMAIN = origin;
         const session: any = await stripe.checkout.sessions.create({
             line_items: cartItems,
             // line_items: [
